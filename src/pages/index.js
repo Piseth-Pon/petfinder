@@ -36,7 +36,7 @@ async function filterPets() {
   }
 }
 
-async function addNewPet() {
+async function addPetForm() {
   const form = document.querySelector("#addNewPetForm")
   form.addEventListener("submit", async (e) => {
     e.preventDefault()
@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   
   displayAllPets()
 
-  addNewPet()
+  addPetForm()
 
 })
 
