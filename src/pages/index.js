@@ -20,12 +20,7 @@ async function displayAllPets() {
 
 }
 
-
-window.addEventListener("DOMContentLoaded", async () => {
-
-  
-  displayAllPets()
-
+async function filterPets() {
   const filterBtns = document.querySelectorAll("#filterBtn")
   for (let i = 0; i < filterBtns.length; i++) {
     const btn = filterBtns[i]
@@ -39,7 +34,9 @@ window.addEventListener("DOMContentLoaded", async () => {
       displayAllPets(filterPets)
     })
   }
+}
 
+async function addNewPet() {
   const form = document.querySelector("#addNewPetForm")
   form.addEventListener("submit", async (e) => {
     e.preventDefault()
@@ -76,8 +73,14 @@ window.addEventListener("DOMContentLoaded", async () => {
     contact.value = ``
 
   })
+}
 
+window.addEventListener("DOMContentLoaded", async () => {
 
+  
+  displayAllPets()
+
+  addNewPet()
 
 })
 
